@@ -1,0 +1,42 @@
+[data-testid="stSidebar"], [data-testid="collapsedControl"], [data-testid="stSidebarCollapsedControl"],
+[data-testid="stHeader"], [data-testid="stToolbar"], [data-testid="stDecoration"] { display: none !important; }
+html, body { overflow-x: hidden; }
+[data-testid="stApp"], [data-testid="stAppViewContainer"] {
+  background:
+    radial-gradient(900px 520px at 80% -6%, #EBD3D8 0%, rgba(235, 211, 216, 0) 62%),
+    radial-gradient(720px 440px at 104% 104%, #F0DDE0 0%, rgba(240, 221, 224, 0) 60%),
+    #FAF6F2;
+}
+[data-testid="stMainBlockContainer"], .block-container { padding: 0 !important; max-width: 100% !important; }
+
+.rk-login-panel {
+  position: fixed; top: 0; left: 0; bottom: 0; width: 50vw; z-index: 1000000;
+  background: var(--rk-bordo); color: #F7F4EF; box-sizing: border-box;
+  padding: 0 clamp(36px, 5vw, 76px); display: flex; flex-direction: column; justify-content: center;
+}
+.rk-login-panel img { width: 240px; max-width: 80%; margin-bottom: 44px; }
+.rk-login-headline { color: #F7F4EF; font-size: clamp(1.7rem, 2.5vw, 2.3rem); line-height: 1.22; font-weight: 600; margin: 0 0 18px 0; }
+.rk-login-panel p { color: #EBDDE1; max-width: 440px; line-height: 1.65; margin: 0; }
+
+/* lado direito (inspirado no mockup): ícone grande entre linhas, título em bordô, cartão com sombra */
+.rk-login-brand { display: flex; align-items: center; gap: 18px; margin: 0 0 12px 0; }
+.rk-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(107, 26, 45, 0), rgba(107, 26, 45, 0.30)); }
+.rk-line.rk-line-r { background: linear-gradient(270deg, rgba(107, 26, 45, 0), rgba(107, 26, 45, 0.30)); }
+.rk-login-icon { width: 92px; height: auto; filter: drop-shadow(0 10px 18px rgba(107, 26, 45, 0.30)); }
+.rk-login-title { text-align: center; font-size: 1.8rem; font-weight: 700; color: var(--rk-bordo); letter-spacing: -0.01em; margin: 0 0 18px 0; }
+[data-testid="stForm"] {
+  background: #FEFBF8; border: 1px solid #EADFDC; border-radius: 12px; padding: 22px 22px 16px 22px;
+  box-shadow: 0 10px 28px rgba(107, 26, 45, 0.10);
+}
+.rk-or { display: flex; align-items: center; gap: 14px; margin: 18px 0 10px 0; color: #4a4744; font-size: 0.85rem; }
+.rk-or span { flex: 1; height: 1px; background: rgba(107, 26, 45, 0.22); }
+.stButton { display: flex; justify-content: center; }
+.stButton > button:not([kind="primaryFormSubmit"]):not([kind="secondaryFormSubmit"]) {
+  background: transparent; color: var(--rk-bordo); border: 1px solid var(--rk-bordo); border-radius: 8px; padding: 0.45rem 1.6rem; }
+.stButton > button:not([kind="primaryFormSubmit"]):not([kind="secondaryFormSubmit"]):hover { background: rgba(107, 26, 45, 0.07); color: var(--rk-bordo); border-color: var(--rk-bordo); }
+.rk-guest-note { text-align: center; color: #5b5753; font-size: 0.8rem; line-height: 1.5; margin: 8px auto 12px auto; max-width: 380px; }
+.rk-login-foot { text-align: center; color: #6B6762; font-size: 0.8rem; margin-top: 14px; }
+
+@media (max-width: 900px) {
+  .rk-login-panel { position: static; width: auto; min-height: 36vh; padding: 36px 28px; }
+}
